@@ -1,5 +1,5 @@
 name:               xmonad-contrib
-version:            0.18.0.9
+version:            0.18.1.9
 -- ^ also update cpp-options: -DXMONAD_CONTRIB_VERSION_*
 
 homepage:           https://xmonad.org/
@@ -73,7 +73,7 @@ library
 
     cpp-options:   -DXMONAD_CONTRIB_VERSION_MAJOR=0
                    -DXMONAD_CONTRIB_VERSION_MINOR=18
-                   -DXMONAD_CONTRIB_VERSION_PATCH=0
+                   -DXMONAD_CONTRIB_VERSION_PATCH=1
     ghc-options:   -Wall -Wno-unused-do-bind
 
     if flag(pedantic)
@@ -154,6 +154,7 @@ library
                         XMonad.Actions.TreeSelect
                         XMonad.Actions.UpdateFocus
                         XMonad.Actions.UpdatePointer
+                        XMonad.Actions.UpKeys
                         XMonad.Actions.Warp
                         XMonad.Actions.WindowBringer
                         XMonad.Actions.WindowGo
