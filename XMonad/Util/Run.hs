@@ -72,6 +72,7 @@ module XMonad.Util.Run (
   -- ** Emacs Integration
   EmacsLib (..),
   setFrameName,
+  setTitleName,
   withEmacsLibs,
   inEmacs,
   elispFun,
@@ -439,6 +440,12 @@ inWorkingDir = pure (" --working-directory " <>)
 -- alist, which the @emacs@ executable does not support.
 setFrameName :: String -> X Input
 setFrameName n = pure ((" -F '(quote (name . \"" <> n <> "\"))' ") <>)
+
+-- | Set a title for the @emacs@ executable.
+--
+-- Note that this uses the @-T@ option to set the
+setTitleName :: String -> X Input
+setTitleName n = pure ((" -T \"" <> n <> "\" ") <>)
 
 -- | Set the appropriate X class for a window.  This will more often
 -- than not actually be the
